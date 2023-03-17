@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Designzillas Quiz</title>
+    <style>
+        .quizArea {
+            padding-top: 60px;
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #terms h2 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .quizArea h1 {
+            text-align: center;
+        }
+
+        .quizArea ul {
+            list-style-type: none;
+        }
+
+        .quizStart {
+            width: 1200px;
+            background-image: url('../img/quizbg.jpg');
+        }
+
+        .quizStartOverlay {
+            width: 1200px;
+            display: flex; 
+            flex-direction: column; 
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+        }
+
+        .timer-section{
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #box{
+            width: 500px;
+            overflow: hidden;
+            background: #0C0A7D;
+            box-shadow: 0 0 10px black;
+            border-radius: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            padding: 10px;
+            text-align: center;
+            display: none;
+        }
+
+        #box h1{
+            color: rgb(0, 0, 0);
+        }
+
+        .close{
+            width: 150px;
+            font-size: 18px;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            background: var(--secondaryColour);
+            display: inline-block;
+            border: 1px solid white;
+            border-radius: 10px;
+        }
+
+        #title1 {
+            margin: 150px 0;
+        }
+
+        #title1 h1 {
+            font-size: 300%;
+            margin: 100px 0;
+        }
+
+        #title2 ol>li {
+            margin-bottom: 20px;
+        }
+
+        #title2 ul {
+            margin-top: 15px;
+        }
+
+        #title2 ul>li {
+            margin-bottom: 5px;
+        }
+
+        #quizBtn1 {
+            width: 150px;
+            font-size: 18px;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            display: inline-block;
+            border: 1px solid white;
+            border-radius: 10px;
+            background-color: #0C0A7D;
+            margin-bottom: 150px;
+            box-shadow: 0 0 15px black;
+
+        }
+
+        #quizBtn2 {
+            width: 150px;
+            font-size: 18px;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            display: inline-block;
+            border: 1px solid white;
+            border-radius: 10px;
+            background-color: #0C0A7D;
+            box-shadow: 0 0 15px black;
+            margin-bottom: 200px;
+        }
+
+        .quizTerms{
+            margin-top: 50px;
+            margin-bottom: 100px;
+        }
+
+        .quizTerms span{
+            font-weight: bold;
+            font-size: small;
+        }
+
+        #marks {
+            color: white;
+        }
+    </style>
+
+    <script>
+        function toggleDisplay() {
+            var t1 = document.getElementById("title1");
+            var t2 = document.getElementById("title2");
+            var btn1 = document.getElementById("quizBtn1");
+            var btn2 = document.getElementById("quizBtn2");
+            var terms = document.getElementById("terms");
+            if (t1.style.display === "none") {
+                t1.style.display = "block";
+                t2.style.display = "none";
+
+                btn1.style.display = "block";
+                btn2.style.display = "none";
+
+
+            } else {
+                t1.style.display = "none";
+                t2.style.display = "block";
+                
+                btn2.style.display = "block";
+                btn1.style.display = "none";
+
+                terms.style.display = "none";
+
+            }
+            startTimer(60);
+        }
+
+        function startTimer(time) {
+            counter = setInterval(timer, 1000);
+            function timer() {
+                    document.getElementById("timer").textContent = time;
+                time--;
+                timeValue = time;
+                if (time <= 0) {
+                    timeTaken = 60 - timeValue;
+                
+                    clearInterval(counter);
+                    //stopTimer(counter);
+                    
+                }
+            }
+        }
+
+        function getRadioValue(radioArray,tot) {
+            let c = 0;
+            for (let i = 0; i < radioArray.length; i++) {
+                if (radioArray[i].checked) {
+                    tot += Number(radioArray[i].value)
+                } else {
+                    c += 1;
+                }
+                
+            }
+            if (c === 4) {
+                tot -= 1;
+            }
+            return(tot)
+        }
+
+        function funcQuizResult() {
+            let tot = 0;
+            for (let i = 1; i <= 10; i++) {
+                let q = "q" + i;
+                let radioArray = document.form[q];
+                tot = getRadioValue(radioArray, tot)
+            }
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+            pop(tot,false);
+
+            clearInterval(counter);
+            time = document.getElementById("timer").textContent;
+            document.getElementById("timer").textContent = time;
+            
+        }
+
+        function pop(tot,popup) {
+            if(popup === false) {
+                document.getElementById("box").style.display = "block";
+                if (tot > 5) {
+                    document.getElementById("box").style.backgroundColor = "#cdebd7"
+                    document.getElementById("marks").innerHTML = "<h2>Congratulations!</h2><p>You have received " + tot + " marks for the quiz.";
+                } else {
+                    document.getElementById("marks").innerHTML = "<h2>Oh No!</h2><p>You have received only " + tot + " marks for the quiz.";
+                }
+                popup = true
+
+            } else {
+                location.replace("../html/Student3_Implementation.html")
+                popup = false
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Quiz Result Box -->
+    <div id="box">
+        <div id="marks"></div>
+        <button class="close" onclick="pop()">Close</button>
+    </div>
+    <!-- Result Box end -->
+
+    <!-- Quiz Area -->
+    <div class="quizArea">
+        <div class="quizStart">
+            <div class="quizStartOverlay">
+                <div id="title1">
+                    <h1>Welcome to the Sports Quiz!</h1>
+                </div>
+                <button id="quizBtn1" onclick="toggleDisplay();setTimeout(funcQuizResult, 60000);">Start Quiz</button>
+            </div>
+        </div>
+        <div id="title2" style="display: none;">
+            <div class="timer-section">
+                <h1>Let's check your knowledge!</h1>
+                <h1>Time Left: <span id="timer">60</span>s</h1>
+            </div>
+            
+            <form name="form">
+                <ol >
+                    <!-- First Question -->
+                    <li>
+                        In cricket, what are leg byes?<br>
+                        <ul class="aList">
+                            <li><input name="q1" value=-1 type="radio">When the ball goes wide of your legs</li>
+                            <li><input name="q1" value=2 id="q1" type="radio">Saying goodbye to your legs</li>
+                            <li><input name="q1" value=-1 type="radio">Runs scored off the batsman's pads</li>
+                            <li><input name="q1" value=-1 type="radio">None of these</li>
+                        </ul>
+                    </li>
+                    <!-- Second Question -->
+                    <li>
+                        What does a groundsman do?<br>
+                        <ul class="aList">
+                            <li><input name="q2" value=-1 type="radio">He provides commentary on play</li>
+                            <li><input name="q2" value=-1 type="radio">He allows entrance to games and takes tickets at the gate</li>
+                            <li><input name="q2" value=2 id="q2" type="radio">He is responsible for preparing the pitch and surrounding areas</li>
+                            <li><input name="q2" value=-1 type="radio">Nothing - he just watches the game</li>
+                        </ul>
+                    </li>
+                    <!-- Third Question -->
+                    <li>
+                        Which of the four strokes is considered the universal stroke, and is also the fastest?<br>
+                        <ul class="aList">
+                            <li><input name="q3" value=2 id="q3" type="radio">Butterfly</li>
+                            <li><input name="q3" value=-1 type="radio">Freestyle</li>
+                            <li><input name="q3" value=-1 type="radio">Backstroke</li>
+                            <li><input name="q3" value=-1 type="radio">Breaststroke</li>
+                        </ul>
+                    </li>
+                    <!-- Fourth Question -->
+                    <li>
+                        The flip turn is only used in two of the four strokes in swimming. Which ones are they?<br>
+                        <ul class="aList">
+                            <li><input name="q4" value=-1 type="radio">Butterfly and freestyle</li>
+                            <li><input name="q4" value=2 id="q4" type="radio">Butterfly and backstroke</li>
+                            <li><input name="q4" value=-1 type="radio">Freestyle and breaststroke</li>
+                            <li><input name="q4" value=-1 type="radio">Freestyle and backstroke</li>
+                        </ul>
+                    </li>
+                    <!-- Fifth Question -->
+                    <li>
+                        Which one of the following is not a position in football?<br>
+                        <ul class="aList">
+                            <li><input name="q5" value=-1 type="radio">Fullback</li>
+                            <li><input name="q5" value=-1 type="radio">Doubleback</li>
+                            <li><input name="q5" value=-1 type="radio">Quarterback</li>
+                            <li><input name="q5" value=2 id="q5" type="radio">Halfback</li>
+                        </ul>
+                    </li>
+                    <!-- Sixth Question -->
+                    <li>
+                        Which is the place on the field that you must step into to score a touchdown in football?<br>
+                        <ul class="aList">
+                            <li><input name="q6" value=-1 type="radio">The end zone</li>
+                            <li><input name="q6" value=-1 type="radio">The goal</li>
+                            <li><input name="q6" value=2 id="q6" type="radio">The TD zone</li>
+                            <li><input name="q6" value=-1 type="radio">It doesn't have a name</li>
+                        </ul>
+                    </li>
+                    <!-- Seventh Question -->
+                    <li>
+                        What happens when a ball lands on the line in volleyball?<br>
+                        <ul class="aList">
+                            <li><input name="q7" value=-1 type="radio">It is considered "out"</li>
+                            <li><input name="q7" value=-1 type="radio">It is considered "in"</li>
+                            <li><input name="q7" value=2 id="q7" type="radio">The point is replayed</li>
+                            <li><input name="q7" value=-1 type="radio">The ref does a dance</li>
+                        </ul>
+                    </li>
+                    <!-- Eighth Question -->
+                    <li>
+                        When was volleyball introduced in the Summer Olympics as an official sport?<br>
+                        <ul class="aList">
+                            <li><input name="q8" value=-1 type="radio">1980</li>
+                            <li><input name="q8" value=2 id="q8" type="radio">1978</li>
+                            <li><input name="q8" value=-1 type="radio">1964</li>
+                            <li><input name="q8" value=-1 type="radio">1992</li>
+                        </ul>
+                    </li>
+                    <!-- Ninth Question -->
+                    <li>
+                        How many days is a cricket test match usually scheduled for?<br>
+                        <ul class="aList">
+                            <li><input name="q9" value=2 id="q9" type="radio">2</li>
+                            <li><input name="q9" value=-1 type="radio">3</li>
+                            <li><input name="q9" value=-1 type="radio">5</li>
+                            <li><input name="q9" value=-1 type="radio">6</li>
+                        </ul>
+                    </li>
+                    <!-- Tenth Question -->
+                    <li>
+                        What does the IM stand for in swimming?<br>
+                        <ul class="aList">
+                            <li><input name="q10" value=-1 type="radio">Insufficient Momentum</li>
+                            <li><input name="q10" value=-1 type="radio">Individual Medley</li>
+                            <li><input name="q10" value=-1 type="radio">Intentional Misconduct</li>
+                            <li><input name="q10" value=2 id="q10" type="radio">Inspirational Moment</li>
+                        </ul>
+                    </li>
+                </ol>
+            </form>
+        </div>
+        <button id="quizBtn2" style="display: none;" onclick="funcQuizResult()">Submit</button>
+        <!-- Quiz Area End -->
+
+        <!-- Quiz T&C -->
+        <div class="quizTerms" id="terms">
+            <h2><u>TERMS & CONDITIONS</u></h2>
+            <p>“THE DESIGNZILLAS QUIZ” is designed to test the knowledge of the participants. The quiz competition will be held by these Official Rules listed hereinafter. </p>
+            <h4>PARTICIPATING IN “THE QUIZ” CONSTITUTES YOUR ACCEPTANCE OF THESE OFFICIAL RULES:</h4>
+            
+            <span>ORGANISER:</span> The Quiz is organized by Designzillas sports limited. <br><br>
+            
+            <span>PARTICIPATION ELIGIBILITY:</span> The Quiz is open to people (the Participants) anywhere in the world who have completed the age of 18 as of 01-01-2023. <br><br>
+            
+            <span>BINDING AGREEMENT:</span> To enter the Quiz, the entrant must accept the official rules ("Rules"). The Rules consist of:<br>
+            <span>(i)</span> The terms and conditions on the web page; <br>
+            <span>(ii)</span> The terms and conditions if any on the Entry Form or the Quiz page. The Participant should read this agreement carefully before entry to ensure that he/she understands and agrees because these Rules form a legally binding agreement concerning this Quiz. <br><br>
+            
+            <span>QUIZ COMPETITION:</span> The Quiz will consist of 10 questions for the participants to answer. <br><br>
+            
+            <span>SELECTION OF WINNERS:</span> To be eligible for the win, a participant must complete the Quiz within 1 minute (60 sec). A winner(s) will be chosen among the participants based on whoever answers the highest number of questions correct. <br><br>
+            
+            <h4>OTHER CONDITIONS </h4>
+            
+            <span>GENERAL CONDITIONS:</span> All national, state and local laws and regulations apply. Designzillas reserves the right to disqualify any Participant from the Quiz if, in Designzillas's sole discretion, it reasonably believes that the Participant has attempted to undermine the legitimate operation of The Quiz by cheating, deception, or other unfair playing practices or annoys, abuses, threatens or harasses any other Participants or Designzillas. <br><br>
+            
+            <span>PRIVACY:</span> Participants agree that personal data submitted may be collected, processed, stored and otherwise used by Designzillas, its affiliates and the consultants to conduct and administer the Quiz. By entering the Quiz, Participants agree to the transmission, processing, disclosing and storage of this data by Designzillas, its affiliates and the consultants. <br><br>
+            
+            <span>PUBLICITY:</span> By entering the competition, the participants & attendees permit Designzillas to collect any information, from the participant for publication or sharing for the promotional requirement of Designzillas. <br><br>
+            
+            <span>INTERNET AND DISCLAIMER:</span> Designzillas and its consultant are not responsible for any malfunction of the entire Quiz Site or any late, lost, damaged, misdirected, incomplete, illegible, undeliverable, answers to system errors, failed, incomplete or garbled computer or other telecommunication transmission malfunctions, network connectivity problems, hardware or software failures of any kind. <br><br>
+            
+            <span>RIGHT TO CANCEL, MODIFY OR DISQUALIFY:</span> If for any reason the Quiz is not capable of running as planned, including infection by computer virus, bugs, tampering, unauthorized intervention, fraud, technical failures, or any other causes which corrupt or affect the administration, security, fairness, integrity, or proper conduct of the Quiz, Designzillas reserves the right at its sole discretion to cancel, terminate, modify or suspend the Quiz. Designzillas further reserves the right to disqualify any Entrant who tampers with the submission process or any other part of the Quiz or Quiz Site. <br><br>
+            
+            <span>FORUM AND RECOURSE TO JUDICIAL PROCEDURES:</span> This Quiz is governed by the laws of Sri Lanka, and only the Supreme Court of Sri Lanka will have exclusive jurisdiction to try any dispute arising from this Quiz. By participating in this Quiz, you agree to be bound by the terms of these Rules and by Designzillas's decisions, which are final and binding on all matters about this Quiz. If any provision(s) of these Rules are held to be invalid or unenforceable, all remaining provisions hereof will remain in full force and effect, to the extent permitted by law, the rights to litigate, seek injunctive relief or make any other recourse to judicial or any other procedure in case of disputes or claims resulting from or in connection with this Quiz are hereby excluded, and Participants expressly waive any such rights.<br><br>
+            
+        </div>
+        <!-- T&C End -->
+
+    </div>
+    </script>
+</body>
+</html>

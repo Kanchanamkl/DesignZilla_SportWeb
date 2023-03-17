@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--  external font  link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <!--  css file link  -->
+   <link rel="stylesheet" href="\DesignZillas\css\thumbnailPage.css">
+
+   <!--  js file link  -->
+   <script src="\DesignZillas\js\Thumbnail.js" defer></script>
+
+</head>
+
+<body>
+
+
+
+
+   <div class="container" id="container_id_1">
+
+
+      <div id="fontSize-container">
+         <header>
+            <h1 id="title">
+               <div class="textcontrols">
+                  <button role="button" id="decreasetext" onclick="decreaseFontSize()">
+                     <span id="span_id_1">A</span>
+                  </button>
+                  <button role="button" id="resettext" onclick="resetFontSize()">
+                     <span id="span_id_2">A</span>
+                  </button>
+                  <button role="button" id="increasetext" onclick="increaseFontSize()">
+                     <span id="span_id_3">A</span>
+                  </button>
+               </div>
+         </header>
+
+      </div>
+
+      <div id="color-container">
+         <header>
+            <h1 id="title">
+               <div class="textcontrols">
+                  <button role="button" id="colorSch1" onclick="colorSch_1()">
+                     
+                  </button>
+                  <button role="button" id="colorSch2" onclick="colorSch_2()">
+                     
+                  </button>
+                  <button role="button" id="colorSch3" onclick="colorSch_3()">
+                     
+                  </button>
+               </div>
+         </header>
+      </div>
+   
+   
+   
+      <h3 class="title" id="title_Sports">Sports</h3>
+
+      <div class="sports-container" >
+
+         <div class="sport" data-name="p-1" id="sport_id_1">
+            <img src="\DesignZillas\img\football_img.jpg" alt="img_alt_1" onmouseover="showWideAreaImage(this)" id="img_id_1">
+         </div>
+
+
+         <div class="sport" data-name="p-2" id="sport_id_2">
+            <img src="\DesignZillas\img\swimming_img.jpg" alt="" alt="img_alt_2" onmouseover="showWideAreaImage(this)"
+               id="img_id_2">
+         </div>
+
+         <div class="sport" data-name="p-3" id="sport_id_3">
+            <img src="\DesignZillas\img\football_img.jpg" alt="img_alt_3" onmouseover="showWideAreaImage(this)" id="img_id_3">
+         </div>
+
+         <div class="sport" data-name="p-4" id="sport_id_4">
+            <img src="\DesignZillas\img\football_img.jpg" alt="img_alt_4" onmouseover="showWideAreaImage(this)" id="img_id_4">
+         </div>
+
+
+         <div class="sport" data-name="p-5" id="sport_id_5">
+            <img src="\DesignZillas\img\swimming_img.jpg" alt="img_alt_5" onmouseover="showWideAreaImage(this)" id="img_id_5">
+         </div>
+
+         <div class="sport" data-name="p-6" id="sport_id_6">
+            <img src="\DesignZillas\img\football_img.jpg" alt="img_alt_6" onmouseover="showWideAreaImage(this)" id="img_id_6">
+         </div>
+
+      </div>
+
+   </div>
+
+   </div>
+
+   <div class="preview-container" id="preview-container_id">
+
+   </div>
+
+
+
+
+
+
+
+   <div class="sports-preview" id="maniImg">
+
+      <div class="preview" data-target="p-1">
+
+         <div class="preview-football" id="preview_id">
+
+            <div class="image">
+
+               <img src="\DesignZillas\img\football_img.jpg" alt="img_alt_1" id="description_id_main">
+
+            </div>
+
+            <div class="description" id="imgtext">
+               <h3>Cricket</h3>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, deserunt distinctio. Culpa in nisi asperiores dicta rem quasi? Fugit nam dolorem voluptates blanditiis reprehenderit porro? Omnis minus suscipit similique reiciendis!</p>
+               
+
+            </div>
+
+         </div>
+
+      </div>
+
+   </div>
+
+   <div class="container" id="container_id_2">
+
+      <div class="sports-container">
+
+         <div class="sport" data-name="p-1" id="sport2_id_1">
+            <img src="\DesignZillas\img\football_img.jpg" alt="img_alt_1" onmouseover="showWideAreaImage(this)" id="img_id_1">
+         </div>
+
+
+         <div class="sport" data-name="p-2" id="sport2_id_2">
+            <img src="\DesignZillas\img\swimming_img.jpg" alt="" alt="img_alt_2" onmouseover="showWideAreaImage(this)"
+               id="img_id_2">
+         </div>
+
+         <div class="sport" data-name="p-3" id="sport2_id_3">
+            <img src="\DesignZillas\img\football_img.jpg" alt="img_alt_3" onmouseover="showWideAreaImage(this)" id="img_id_3">
+         </div>
+
+         <div class="sport" data-name="p-4" id="sport2_id_4">
+            <img src="\DesignZillas\img\football_img.jpg" alt="img_alt_4" onmouseover="showWideAreaImage(this)" id="img_id_4">
+         </div>
+
+
+         <div class="sport" data-name="p-5" id="sport2_id_5">
+            <img src="\DesignZillas\img\swimming_img.jpg" alt="img_alt_5" onmouseover="showWideAreaImage(this)" id="img_id_5">
+         </div>
+
+         <div class="sport" data-name="p-6" id="sport2_id_6">
+            <img src="\DesignZillas\img\football_img.jpg" alt="img_alt_6" onmouseover="showWideAreaImage(this)" id="img_id_6">
+         </div>
+
+      </div>
+
+   </div>
+
+   </div>
+
+
+
+</body>
+
+</html>

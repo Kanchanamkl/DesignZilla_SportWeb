@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:700&display=swap');
+
+body {
+    background-color: #1f2740;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+svg {
+    color: #ffa4a4;
+}
+
+.st3,
+.st4 {
+    fill: #ffcb2f;
+    stroke: #12192c;
+    stroke-width: 1.5;
+}
+
+.st4 {
+    fill: #69b2b1;
+}
+
+text {
+    fill: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5rem;
+}
+
+text+text {
+    font-size: 1rem;
+}
+
+.line {
+    fill: none;
+    stroke: #f65a6d;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.line.green {
+    stroke: #69b3b2;
+}
+
+.ceo {
+    --borderColor: #ffcb2f;
+}
+
+.coo,
+.ciso,
+.cto,
+.cro {
+    --borderColor: #69b3b2;
+}
+
+.am,
+.tl,
+.pl,
+.dev,
+.ui,
+.do {
+    color: #f65a6d;
+}

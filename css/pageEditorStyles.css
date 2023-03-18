@@ -1,0 +1,173 @@
+
+
+
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+a:link,
+a:focus,
+a:hover,
+a:active {
+  box-shadow: none;
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  padding: 4rem 16rem 6rem;
+
+  background: hsl(220, 25%, 10%);
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+h1,
+p {
+  color: hsl(230, 5%, 66%);
+
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.2rem;
+  letter-spacing: .4rem;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.stu_details{
+  background-color: rgba(0, 0, 0, 0.315);
+  width:fit-content;
+  position: relative;
+  top: 2vh;
+  left:auto;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 10px;
+  width: auto;
+}
+.stu_details h2{
+  margin: 4px;
+  color: hsl(230, 5%, 66%);
+  font-size: 1.9rem;
+  font-family: 'Inconsolata', monospace;
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  position: relative;
+  
+}
+
+.stu_details p{
+  color: hsl(230, 5%, 66%);
+  font-family: 'Inconsolata', monospace;
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+}
+
+
+.editor_tasks{
+  background-color: rgba(161, 194, 255, 0.425);
+  height:fit-content;
+  width: fit-content;
+  position: relative;
+  top: 6vh;
+  left: auto;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin: 10px;
+  padding: 15px;
+}
+
+.editor_tasks h2{
+  margin: 7px;
+  color: hsl(240, 40%, 98%);
+  font-size: 2rem;
+  font-family: 'Inconsolata', monospace;
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  position: relative;
+}
+
+
+
+.editor_tasks p{
+  color: hsl(240, 4%, 84%);
+  font-family: 'Inconsolata', monospace;
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  position: relative;
+ 
+  
+}
+
+
+
+ hr{
+  background-color: aqua;
+  margin-top: 15px;
+  margin-bottom: 35px;
+
+}
+
+
+p {
+  font-size: 1.6rem;
+  margin-top: 1.6rem;
+}
+
+
+
+
+/* link */
+/* =============================================================================== */
+.link {
+  --color: hsl(200, 60%, 50%);
+  --shadow: hsl(230, 5%, 66%);
+  --border-color: hsl(230, 5%, 44%);
+
+  color: var(--color);
+  border-bottom: 1px solid var(--border-color);
+
+  font-size: 1.8rem;
+  font-weight: normal;
+  text-decoration: none;
+  letter-spacing: .2rem;
+
+  cursor: pointer;
+  position: relative;
+
+  transition: .4s;
+}
+
+.link:hover,
+.link:focus,
+.link:active {
+  border-color: chartreuse;
+}
+
+
+

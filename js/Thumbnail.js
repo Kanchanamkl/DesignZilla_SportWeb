@@ -142,8 +142,8 @@ function colorSch_2(){
 }
 
 function colorSch_3(){
-  document.getElementById("container_id_1").style.backgroundColor =  "#5373771a" ;
-  document.getElementById("container_id_2").style.backgroundColor =  "#5373771a" ;
+  document.getElementById("container_id_1").style.backgroundColor =  "#d3f5f9" ;
+  document.getElementById("container_id_2").style.backgroundColor =  "#d3f5f9" ;
 
   document.getElementById("sport_id_1").style.backgroundColor =  "#6b5b5b63" ;
   document.getElementById("sport_id_2").style.backgroundColor =  "#6b5b5b63" ;

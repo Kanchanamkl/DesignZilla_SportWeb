@@ -1,0 +1,12 @@
+body{
+    background-color: rgba(9, 198, 255, 0.959);
+    width:100vw;
+    height: 100vh;
+}
+.main h1{
+ color: rgba(215, 255, 37, 0.644);
+ font-size: 80px;
+ position:relative;
+ top:40vh;
+ text-align:center;
+}

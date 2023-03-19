@@ -1,12 +1,137 @@
 body{
-    background-color: rgba(13, 9, 255, 0.712);
-    width:100vw;
+    background-color: rgba(7, 117, 243, 0.185);
+    width:auto;
     height: 100vh;
 }
 .main h1{
- color: rgba(252, 248, 17, 0.671);
+ color: rgba(252, 248, 17, 0);
  font-size: 80px;
  position:relative;
- top:40vh;
+ top:10vh;
  text-align:center;
+}
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+  
+    font-family: 'Inter', sans-serif;
+}
+
+
+.blog_container{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(180, 238, 19, 0);
+    /* padding-left: 2vh; 
+    padding-right: 2vh;  */
+    width:auto;
+    margin-top: 15vh;
+}
+.card{
+    width: auto;
+    height: 69vh;
+    background: #fff;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: inline-block;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+    transition: .5s ease;
+}
+.card:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.card figure img{
+    width: auto;
+    height: 32vh;
+    border-radius: 10px 10px 0 0;
+}
+.card h4{ 
+    text-transform: uppercase;
+    width: 252px;
+    height: 46px;
+    margin: auto;
+    margin-top: 28px;
+    color: #504f4f;
+    text-align: justify;
+    line-height: 22px;
+}
+.card p{
+    width: 20vw;
+    height: auto;
+    color: #615f5f;
+    size: 18px;
+    font-weight: 100;
+    text-align: justify;
+    margin: auto;
+    margin-top: 1.5vh;
+    padding: 0.6vw;
+}
+.card a{
+    /* float: left; */
+    /* margin-left: 15vw; */
+    /* margin-top: 20px; */
+    transition: .5s ease;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #4e4e4e;
+    /* font-weight: bolder; */
+}
+.card a:hover{
+    /* margin-left: 50px; */
+    transition: .5s ease;
+}
+figure{
+    width: 100%;
+    
+}
+
+.header h1{
+    color: #0a0a0aa2;
+    margin-bottom: 4vh;
+    margin-top: 5vh;
+    font-size: 2.5em;
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+}
+
+
+
+.user {
+    display: flex;
+    position: relative;
+    margin-top: 3vh;
+    margin-left: 2vw;
+    margin-bottom: 2vh;
+    text-align: left;
+    color: #000000bb;
+    
+}
+.user img {
+    border-radius: 50%;
+    margin-right: 0.625rem;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+.user-info h5 {
+    margin: 0;
+}
+.user-info small {
+    color: var(--user-postdate);
+    text-align: left;
+}
+
+
+.card-footer{
+    display: flex;
+
 }

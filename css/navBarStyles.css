@@ -6,6 +6,7 @@
 
 /* Navbar */
 .nav-section {
+    position: absolute;
     width: 100vw;
     margin: 0 auto;
 }

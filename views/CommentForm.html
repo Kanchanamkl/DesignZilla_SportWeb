@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="\css\commentFormStyles.css">
     <link rel="stylesheet" href="\css\navBarStyles.css">
-    <title>Document</title>
+    <title>RUN-CommentForm</title>
 
 </head>
 <body>
@@ -38,9 +38,76 @@
     </div>
     <!-- End-Navigation bar -->
 
-    <div class="main">
+    <!-- <div class="main">
      <h1>COMMENT FROM - JINODI</h1>
-    </div>
+    </div> -->
+	<div class="hero">
+		<div>
+			<video autoplay loop muted plays-inline class="back">
+				<source src="../img/video1Run.mp4" type="video/mp4">
+			</video>
+
+			<div class="box">
+				<div class="container">
+					<div class="center"></div>
+					<center>
+						<h1 class="font">Comment Form</h1>
+					</center>
+					<br><br>
+					<form action="submit.php" method="post">
+						<label for="name">Name:</label>
+						<input type="text" id="name" name="name" required>
+						<br><br>
+						<label for="email">Email:</label>
+						<input type="email" id="email" name="email" required>
+						<br><br>
+						<label>How satisfied are you with our website today?</label>
+						<br><br>
+						<input type="radio" id="0" name="rating" value="0">
+						<label for="0">0</label>
+						<input type="radio" id="1" name="rating" value="1">
+						<label for="1">1</label>
+						<input type="radio" id="2" name="rating" value="2">
+						<label for="2">2</label>
+						<input type="radio" id="3" name="rating" value="3">
+						<label for="2">3</label>
+						<input type="radio" id="4" name="rating" value="4">
+						<label for="2">4</label>
+						<input type="radio" id="5" name="rating" value="5">
+						<label for="2">5</label>
+						<input type="radio" id="6" name="rating" value="6">
+						<label for="2">6</label>
+						<input type="radio" id="7" name="rating" value="7">
+						<label for="2">7</label>
+						<input type="radio" id="8" name="rating" value="8">
+						<label for="2">8</label>
+						<input type="radio" id="9" name="rating" value="9">
+						<label for="2">9</label>
+						<input type="radio" id="10" name="rating" value="10">
+						<label for="2">10</label>
+
+						<br> <br>
+						<label for="reasons">Please tell us your reasons for giving this rating:</label>
+						<textarea id="reasons" name="reasons"></textarea>
+						<br> <br>
+						<label for="task">How did you want to complete this task today?</label>
+						<select id="task" name="task">
+							<option value="phone">Phone</option>
+							<option value="website">Website</option>
+							<option value="webchat">Webchat</option>
+							<option value="socialmedie">Socail Media</option>
+							<option value="Email">Email</option>
+						</select>
+						<br> <br>
+						<input type="submit" value="Submit">
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
 
 </body>
 </html>

@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
+*{
+   font-family: 'Nunito', sans-serif;
+}
+
+
 /* Navbar */
 .nav-section {
     width: 100vw;
@@ -21,6 +27,7 @@
     padding: 0 20px;
 
 }
+
 .nav {
     overflow: hidden;
     width: 1200px;
@@ -53,7 +60,19 @@
     color: white;
 }
 
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0
+}
+
+.mySlides {
+    display: none
+}
+
+img {
+    vertical-align: middle;
+}

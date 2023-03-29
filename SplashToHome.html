@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RUN-Splash</title>
-    <style>
-        body{background:rgb(113, 163, 207);width: 100%;height: 100%;margin:0; padding: 0;}
-        #Splash{
-            width: 100%;height: 100%;position:absolute ;background: rgb(46, 42, 42);display: flex;
-            flex-direction: column;opacity: 1; transition: opacity 4s; top: 0;left: 0;
-        justify-content:left; align-items:baseline;
-        }
-         .logo{width: 200px;}
-         #Splash.fade{opacity: 0;}
-        
-        h1{font-size:xx-large;color: rgb(255, 255, 255);font-family:'Segoe UI', Tahoma, Geneva, Verdana, Arial, Helvetica, sans-serif ;}
-    </style>
+    <title>RUN</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico?v=2">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./css/splashStyles.css">
+
 </head>
+
 <body onLoad="setTimeout('delayer()', 4000)">
-    <p>Jinodi ge main page</p>
-    <div id="Splash">
-        <img class="logo" src="C:\Users\susandi.kasth\Downloads\2.png"></img>
-    <p style="color: aliceblue;">Team Gamma</p>
-    <p style="color: aliceblue;">Kanchana Kalansooriya - 20212055</p>
-    <p style="color: aliceblue;">Jinodi Widanage - 20212051</p>
-    <p style="color: aliceblue;">Geeviny Vazavan - 20212037</p>
-    <p style="color: aliceblue;">Susandi Kasthuriarachchi - 20212059</p>
+    <div class="main">
+        <h1 style="color:black;">Designzilla</h1>
+        <h2>Group 1 coursework </h2>
+        <h4><i>Members</i></h4>
+        <div>
+            <ul>
+                <li>Kanchana Kalansooriya - 20212055 </li>
+                <li>Jinodi Widanage - 20212051</li>
+                <li>Geeviny Vazavan - 20212037</li>
+                <li>Susandi Kasthuriarachchi - 20212059</li>
+            </ul>
+        </div>
+
     </div>
-    
+
+
     <script>
-        function delayer(){
+        function delayer() {
             window.location = "./views/home.html"
         }
     </script>
-    
+
+
 </body>
+
 </html>

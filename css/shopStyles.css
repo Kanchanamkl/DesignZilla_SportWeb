@@ -1,4 +1,11 @@
+main{
+    margin:1vh;
+}
 
+header{
+    margin-top: 15vh;
+    margin-left: 5vw;
+}
 
 
 .product-name {
@@ -45,7 +52,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(192, 192, 192, 0.1);
+    background-color: rgba(247, 237, 237, 0);
     font-family: cursive;
     font-size: xx-large;
     cursor: wait;

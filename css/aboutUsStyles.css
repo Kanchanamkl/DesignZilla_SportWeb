@@ -10,3 +10,132 @@ body{
  top:40vh;
  text-align:center;
 }
+
+.aboutUs {
+    width: 1200px;
+    height: 350px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.aboutUsImg {
+    width: 500px;
+    height: 350px;
+    margin: auto;
+}
+
+.aboutUsTitle {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 50px;
+    font-weight: bold;
+    margin: auto;
+}
+
+.aboutUsDescription {
+    width: 700px;
+    margin: auto;
+    padding: 20px 30px;
+}
+
+.aboutTeam {
+    margin: auto;
+    margin-top: 20px;
+    width: 1200px;
+    height: 600px;
+}
+
+.aboutTeam > .aboutUsTitle {
+    height: 80px;
+}
+
+.aboutDevs {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: space-around;
+    padding-top: 50px;
+}
+
+.devWrap {
+    position: relative;
+    width: 285px;
+    background-color: #bbb;
+    padding: 15px 15px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    transition: transform .5s;
+    border-radius: 15px;
+
+}
+
+.dev1 {
+    margin: 15px 6px 15px 12px;
+}
+
+.dev2 {
+    margin: 15px 6px 15px 6px;
+}
+
+.dev3 {
+    margin: 15px 6px 15px 6px;
+}
+
+.dev4 {
+    margin: 15px 12px 15px 6px;
+}
+
+.devWrap:hover {
+    transform: scale(1.1);
+    z-index: 9999;
+}
+
+.devWrap:active {
+    transform: scale(0.9);
+}
+
+.devWrap > a > img {
+    width: 255px;
+    height: 350px;
+    border-radius: 20px;
+    box-shadow: 5px 10px 8px 10px #aaaaaa;
+
+}
+
+.devInfo {
+    margin: auto;
+    padding-top: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.devOverlay {
+    background-color: #383838e5;  
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    border-radius: 15px;
+    transition: .5s ease;
+}
+
+.devWrap:hover .devOverlay {
+    opacity: 1;
+  }
+  
+.devDescription {
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}

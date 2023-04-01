@@ -1,0 +1,135 @@
+.quizArea {
+    padding-top: 60px;
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#terms h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.quizArea h1 {
+    text-align: center;
+}
+
+.quizArea ul {
+    list-style-type: none;
+}
+
+.quizStart {
+    width: 1200px;
+    background-image: url('../img/quizbg.jpg');
+}
+
+.quizStartOverlay {
+    width: 1200px;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+}
+
+.timer-section{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#box{
+    width: 500px;
+    overflow: hidden;
+    background: #0C0A7D;
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    padding: 10px;
+    text-align: center;
+    display: none;
+}
+
+#box h1{
+    color: rgb(0, 0, 0);
+}
+
+.close{
+    width: 150px;
+    font-size: 18px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: var(--secondaryColour);
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+#title1 {
+    margin: 150px 0;
+}
+
+#title1 h1 {
+    font-size: 300%;
+    margin: 100px 0;
+}
+
+#title2 ol>li {
+    margin-bottom: 20px;
+}
+
+#title2 ul {
+    margin-top: 15px;
+}
+
+#title2 ul>li {
+    margin-bottom: 5px;
+}
+
+#quizBtn1 {
+    width: 150px;
+    font-size: 18px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: #0C0A7D;
+    margin-bottom: 150px;
+    box-shadow: 0 0 15px black;
+
+}
+
+#quizBtn2 {
+    width: 150px;
+    font-size: 18px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: #0C0A7D;
+    box-shadow: 0 0 15px black;
+    margin-bottom: 200px;
+}
+
+.quizTerms{
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.quizTerms span{
+    font-weight: bold;
+    font-size: small;
+}
+
+#marks {
+    color: white;
+}

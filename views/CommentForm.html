@@ -1,113 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="\css\commentFormStyles.css">
-    <link rel="stylesheet" href="\css\navBarStyles.css">
-    <title>RUN-CommentForm</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Run Sports</title>
+  <link rel="stylesheet" href="/css/commentFormStyles.css">
+  <link rel="stylesheet" href="/css/homeStyles.css" />
+  <link rel="stylesheet" href="/css/navBarStyles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="commentFormScript.js"></script>
+
+  <style>
+    .error {
+      color: red;
+      font-size: 90%;
+    }
+  </style>
 
 </head>
+
 <body>
-    <!-- Nav Bar -->
-    <div class="nav-section">
+	    <!-- Nav Bar -->
+      <div class="nav-section">
         <div class="navbar">
-            <div>
-                <img src="../img/logoBlack.png" alt="logo" height="60">
-            </div>
-            <div class="nav">
-                <!-- Jinodi -->
-                <a href="./home.html" class="active">Home</a>
-                <!-- Jinodi -->
-                <a href="./CommentForm.html">Comments</a>
-                <!-- Susa -->
-                <a href="./Shop.html">Shop</a>
-                <!-- Geev -->
-                <a href="./Quiz.html">Quiz</a>
-                <!-- all -->
-                <a href="./Blog.html">Blog</a>
-                <!-- Kanchana -->
-                <a href="./Site_Map.html">Site Map</a>
-                <!-- Kanchana -->
-                <a href="./Thumbnail_Gallery.html">Image Gallery</a>
-                <!-- Geev -->
-                <a href="./AboutUs.html">About Us</a>
-            </div>
+          <div>
+            <img src="../img/logoBlack.png" alt="logo" height="60">
+          </div>
+          <div class="nav">
+            <!-- Jinodi -->
+            <a href="./home.html" class="active">Home</a>
+            <!-- Jinodi -->
+            <a href="./CommentForm.html">Comments</a>
+            <!-- Susa -->
+            <a href="./Shop.html">Shop</a>
+            <!-- Geev -->
+            <a href="./Quiz.html">Quiz</a>
+            <!-- all -->
+            <a href="./Blog.html">Blog</a>
+            <!-- Kanchana -->
+            <a href="./Site_Map.html">Site Map</a>
+            <!-- Kanchana -->
+            <a href="./Thumbnail_Gallery.html">Image Gallery</a>
+            <!-- Geev -->
+            <a href="./AboutUs.html">About Us</a>
+          </div>
         </div>
+      </div>
+      <!-- End-Navigation bar -->
+
+  <div class="hero">
+    <div>
+      <video autoplay loop muted plays-inline class="back">
+        <source src="/img/video1Run.mp4" type="video/mp4">
+      </video>
+
+      <div class="container" style="opacity:0.7;">
+        <form name="commentForm" onsubmit="return validateForm()" action="mailto:jinodiwidanage@gmail.com" method="post"
+          enctype="text/plain">
+
+          <div class="comment-title">
+            <h1>Comment Form</h1>
+            <h5>Your feedback is highly appreciated and will help us to improve our ability to serve you</h5>
+          </div>
+
+          <div class="row">
+            <div class="col-40">
+              <label for="fname">Name</label>
+            </div>
+            <div class="col-60">
+              <input type="text" id="name" name="name" placeholder="Your name..">
+              <div class="error" id="nameErr"></div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-40">
+              <label for="email">Email</label>
+            </div>
+            <div class="col-60">
+              <input type="text" id="email" name="email" placeholder="Your email..">
+              <div class="error" id="emailErr"></div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-40">
+              <label for="taskCompleted">How did you want to complete this task today?</label>
+            </div>
+            <div class="col-60">
+              <select id="taskCompleted" name="taskCompleted">
+                <option value="phone">Phone</option>
+                <option value="website">Website</option>
+                <option value="webchat">Webchat</option>
+                <option value="socialmedie">socialmedie</option>
+                <option value="email">Email</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-40">
+              <label for="taskFuture">If you had to complete this task again, how would you prefer to do it?</label>
+            </div>
+            <div class="col-60">
+              <select id="taskFuture" name="taskFuture">
+                <option value="phone">Phone</option>
+                <option value="website">Website</option>
+                <option value="webchat">Webchat</option>
+                <option value="socialmedie">socialmedie</option>
+                <option value="email">Email</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-40">
+              <label for="rating">How satisfied are you with our website today? <br>(0-dissatisfied /
+                10-satisfied)</label>
+            </div>
+            <div class="col-60">
+              <input type="radio" id="0" name="rating" value="0">
+              <label for="0">0</label>
+              <input type="radio" id="1" name="rating" value="1">
+              <label for="1">1</label>
+              <input type="radio" id="2" name="rating" value="2">
+              <label for="2">2</label>
+              <input type="radio" id="3" name="rating" value="3">
+              <label for="2">3</label>
+              <input type="radio" id="4" name="rating" value="4">
+              <label for="2">4</label>
+              <input type="radio" id="5" name="rating" value="5">
+              <label for="2">5</label>
+              <input type="radio" id="6" name="rating" value="6">
+              <label for="2">6</label>
+              <input type="radio" id="7" name="rating" value="7">
+              <label for="2">7</label>
+              <input type="radio" id="8" name="rating" value="8">
+              <label for="2">8</label>
+              <input type="radio" id="9" name="rating" value="9">
+              <label for="2">9</label>
+              <input type="radio" id="10" name="rating" value="10">
+              <label for="2">10</label>
+            </div>
+            <div class="error" id="ratingErr"></div>
+          </div>
+
+          <div class="row">
+            <div class="col-40">
+              <label for="reasons">Please tell us your reasons for giving this rating:</label>
+            </div>
+            <div class="col-60">
+              <textarea id="reasons" name="reasons" placeholder="Reasons.." style="height:80px"></textarea>
+              <div class="error" id="reasonsErr"></div>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <input type="reset" value="Reset">
+            <input type="submit" value="Send">
+          </div>
+        </form>
+      </div>
+
+
     </div>
-    <!-- End-Navigation bar -->
+  </div>
+  <!----------- Footer -------------->
 
-    <!-- <div class="main">
-     <h1>COMMENT FROM - JINODI</h1>
+  <footer id="footer">
+    <!-- <div class="title-text">
+      <p>Contact Us
+      </p>
+      <div class="social-media-icons">
+        <a href="https://www.instagram.com/?hl=en" target="_blank"><i class="fa fa-instagram"
+            style="color:#40c7d1;"></i></a>
+        <a href="https://www.instagram.com/?hl=en" target="_blank"><i class="fa fa-facebook-f"
+            style="color:#40c7d1;"></i></a>
+        <a href="https://www.instagram.com/?hl=en" target="_blank"><i class="fa fa-twitter-square"
+            style="color:#40c7d1;"></i></a>
+        <a href="https://www.instagram.com/?hl=en" target="_blank"><i class="fa fa-linkedin-square"
+            style="color:#40c7d1;"></i></a>
+      </div>
     </div> -->
-	<div class="hero">
-		<div>
-			<video autoplay loop muted plays-inline class="back">
-				<source src="\img\video1Run.mp4" type="video/mp4">
-			</video>
+    <!-- <div class="footer-row"> -->
+      <!-- <div class="footer-left">
+        <p> <i class="fa fa-home" aria-hidden="true"></i> Run Sports, Col 08. , Sri Lanka</p>
+        <p> <i class="fa fa-envelope" aria-hidden="true"></i> run_sports@gmail.com</p>
+        <p> <i class="fa fa-phone" aria-hidden="true"></i> +94 112057452</p>
+      </div> -->
+<!-- 
+      <div class="footer-right">
 
-			<div class="box">
-				<div class="container">
-					<div class="center"></div>
-					<center>
-						<h1 class="font">Comment Form</h1>
-					</center>
-					<br><br>
-					<form action="submit.php" method="post">
-						<label for="name">Name:</label>
-						<input type="text" id="name" name="name" required>
-						<br><br>
-						<label for="email">Email:</label>
-						<input type="email" id="email" name="email" required>
-						<br><br>
-						<label>How satisfied are you with our website today?</label>
-						<br><br>
-						<input type="radio" id="0" name="rating" value="0">
-						<label for="0">0</label>
-						<input type="radio" id="1" name="rating" value="1">
-						<label for="1">1</label>
-						<input type="radio" id="2" name="rating" value="2">
-						<label for="2">2</label>
-						<input type="radio" id="3" name="rating" value="3">
-						<label for="2">3</label>
-						<input type="radio" id="4" name="rating" value="4">
-						<label for="2">4</label>
-						<input type="radio" id="5" name="rating" value="5">
-						<label for="2">5</label>
-						<input type="radio" id="6" name="rating" value="6">
-						<label for="2">6</label>
-						<input type="radio" id="7" name="rating" value="7">
-						<label for="2">7</label>
-						<input type="radio" id="8" name="rating" value="8">
-						<label for="2">8</label>
-						<input type="radio" id="9" name="rating" value="9">
-						<label for="2">9</label>
-						<input type="radio" id="10" name="rating" value="10">
-						<label for="2">10</label>
+        <a href="#" target="blank" class="footer a:link">
+          <p> Terms of condition</p>
+        </a>
+        <a href="#" target="blank">
+          <p> F A Q</p>
+        </a>
+      </div> -->
+    <!-- </div> -->
+    <div class="copywrite">
+      <p>Copyright &copy; 2023 Run Sports (Pvt) Ltd. All Rights Reserved.</p>
+      <p>Developed by a
+        <a href="about-us.html#devs">Designzillas Group of Developers</a>
+      </p>
+    </div>
+  </footer>
 
-						<br> <br>
-						<label for="reasons">Please tell us your reasons for giving this rating:</label>
-						<textarea id="reasons" name="reasons"></textarea>
-						<br> <br>
-						<label for="task">How did you want to complete this task today?</label>
-						<select id="task" name="task">
-							<option value="phone">Phone</option>
-							<option value="website">Website</option>
-							<option value="webchat">Webchat</option>
-							<option value="socialmedie">Socail Media</option>
-							<option value="Email">Email</option>
-						</select>
-						<br> <br>
-						<input type="submit" value="Submit">
-
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-
+  <!-- Back to top button -->
+  <div class="goUp" id="up">
+    <a href="#top">&#8963;</a>
+  </div>
 </body>
+
 </html>

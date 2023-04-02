@@ -12,7 +12,7 @@ body {
 }
 
 /* ------------------------ Navbar ------------------------*/
-.nav-section {
+/* .nav-section {
     width: 1200px;
     margin: 0 auto;
 }
@@ -26,7 +26,6 @@ body {
     position: fixed;
     width: 1200px;
     top: 0;
-    /*left: 83px; */
     z-index: 9999;
 }
 
@@ -37,7 +36,6 @@ body {
     overflow: hidden;
     width: 1200px;
     background-color: #333;
-    /* background-color: var(--secondaryColour); */
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -68,7 +66,7 @@ body {
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
-img {vertical-align: middle;}
+img {vertical-align: middle;} */
 
 
 /* ------------------------ Banner ------------------------*/

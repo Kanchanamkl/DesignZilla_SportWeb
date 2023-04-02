@@ -9,18 +9,18 @@ h1{
 h2{
     font-size: 300%;
    
-    color:black;
+    color:rgb(243, 238, 238);
     opacity: 0.7;
 }
 h4{
     font-size: 280%;
-    color: rgb(29, 31, 31);
+    color: rgb(15, 15, 15);
     opacity:0.7;
 }
 ul{
     list-style: none;
     font-size: 220%;
-    color: rgb(37, 7, 7);
+    color:rgb(255, 255, 255);
     text-align: justify;
     opacity: 0.7;
    
@@ -30,8 +30,13 @@ ul{
 body{
 
     margin: auto;
-    background-color:lightgrey;
+    background-color:rgb(255, 252, 252);
     margin-top: 15vh;
+    background-image:url(/img/splash_bg2.jpg) ;
+    background-position: 50% 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
     /* background-image:url("C:\Users\USER\Desktop\pics\victor-freitas-vqDAUejnwKw-unsplash.jpg"); */
     /* height: 50%;
     padding-top: 60px;

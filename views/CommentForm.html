@@ -12,13 +12,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <script src="commentFormScript.js"></script>
 
-  <style>
-    .error {
-      color: red;
-      font-size: 90%;
-    }
-  </style>
-
 </head>
 
 <body>
@@ -32,7 +25,7 @@
             <!-- Jinodi -->
             <a href="./home.html" >Home</a>
             <!-- Jinodi -->
-            <a href="./CommentForm.html" class="active">Comments</a>
+            <a href="./CommentForm.html" >Comments</a>
             <!-- Susa -->
             <a href="./Shop.html">Shop</a>
             <!-- Geev -->
@@ -50,169 +43,131 @@
       </div>
       <!-- End-Navigation bar -->
 
-  <div class="hero">
-    <div>
-      <video autoplay loop muted plays-inline class="back">
-        <source src="/img/video1Run.mp4" type="video/mp4">
-      </video>
-
-      <div class="container" style="opacity:0.7;">
-        <form name="commentForm" onsubmit="return validateForm()" action="mailto:jinodiwidanage@gmail.com" method="post"
-          enctype="text/plain">
-
-          <div class="comment-title">
-            <h1>Comment Form</h1>
-            <h5>Your feedback is highly appreciated and will help us to improve our ability to serve you</h5>
+      <div class="hero">
+        <div>
+          <video autoplay loop muted plays-inline class="back">
+            <source src="/img/video1Run.mp4" type="video/mp4">
+          </video>
+    
+          <div class="container" style="opacity:0.7;">
+            <form name="commentForm" onsubmit="return validateForm()"  action="mailto:jinodiwidanage@gmail.com"  method="post" enctype="text/plain">
+           
+              <div class="comment-title">
+                <h1>Comment Form</h1>
+                <h5>Your feedback is highly appreciated and will help us to improve our ability to serve you</h5>
+              </div>
+              
+              <div class="row">
+                <div class="col-40">
+                  <label for="fname">Name</label>
+                </div>
+                <div class="col-60">
+                  <input type="text" id="name" name="name" placeholder="Your name..">
+                  <div class="error" id="nameErr"></div>
+                </div>
+              </div>
+    
+              <div class="row">
+                <div class="col-40">
+                  <label for="email">Email</label>
+                </div>
+                <div class="col-60">
+                  <input type="text" id="email" name="email" placeholder="Your email..">
+                <div class="error" id="emailErr"></div>
+                </div>
+              </div>
+    
+              <div class="row">
+                <div class="col-40">
+                  <label for="preTask">How did you want to complete this task today?</label>
+                </div>
+                <div class="col-60">
+                  <select id="preTask" name="preTask">
+                    <option value="phone">Phone</option>
+                    <option value="website">Website</option>
+                    <option value="webchat">Webchat</option>
+                    <option value="socialmedie">socialmedie</option>
+                    <option value="email">Email</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-40">
+                  <label for="postTask">If you had to complete this task again, how would you prefer to do it?</label>
+                </div>
+                <div class="col-60">
+                  <select id="postTask" name="postTask">
+                    <option value="phone">Phone</option>
+                    <option value="website">Website</option>
+                    <option value="webchat">Webchat</option>
+                    <option value="socialmedie">socialmedie</option>
+                    <option value="email">Email</option>
+                  </select>
+                </div>
+              </div>
+    
+              <div class="row">
+                <div class="col-40">
+                  <label for="rating">How satisfied are you with our website today? <br>(0-dissatisfied /
+                    10-satisfied)</label>
+                </div>
+                <div class="col-60">
+                  <input type="radio" id="0" name="rating" value="0">
+                  <label for="0">0</label>
+                  <input type="radio" id="1" name="rating" value="1">
+                  <label for="1">1</label>
+                  <input type="radio" id="2" name="rating" value="2">
+                  <label for="2">2</label>
+                  <input type="radio" id="3" name="rating" value="3">
+                  <label for="2">3</label>
+                  <input type="radio" id="4" name="rating" value="4">
+                  <label for="2">4</label>
+                  <input type="radio" id="5" name="rating" value="5">
+                  <label for="2">5</label>
+                  <input type="radio" id="6" name="rating" value="6">
+                  <label for="2">6</label>
+                  <input type="radio" id="7" name="rating" value="7">
+                  <label for="2">7</label>
+                  <input type="radio" id="8" name="rating" value="8">
+                  <label for="2">8</label>
+                  <input type="radio" id="9" name="rating" value="9">
+                  <label for="2">9</label>
+                  <input type="radio" id="10" name="rating" value="10">
+                  <label for="2">10</label>
+                </div>
+                <div class="error" id="ratingErr"></div>
+              </div>
+    
+              <div class="row">
+                <div class="col-40">
+                  <label for="reasons">Please tell us your reasons for giving this rating:</label>
+                </div>
+                <div class="col-60">
+                <textarea id="reasons" name="reasons" placeholder="Reasons.." style="height:80px"></textarea>
+                <div class="error" id="reasonsErr"></div>
+              </div>
+              </div>
+    
+    
+              <div class="row">
+                <input type="reset" value="Reset">
+                <input type="submit" value="Send">
+              </div>
+            </form>
           </div>
-
-          <div class="row">
-            <div class="col-40">
-              <label for="fname">Name</label>
-            </div>
-            <div class="col-60">
-              <input type="text" id="name" name="name" placeholder="Your name..">
-              <div class="error" id="nameErr"></div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-40">
-              <label for="email">Email</label>
-            </div>
-            <div class="col-60">
-              <input type="text" id="email" name="email" placeholder="Your email..">
-              <div class="error" id="emailErr"></div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-40">
-              <label for="taskCompleted">How did you want to complete this task today?</label>
-            </div>
-            <div class="col-60">
-              <select id="taskCompleted" name="taskCompleted">
-                <option value="phone">Phone</option>
-                <option value="website">Website</option>
-                <option value="webchat">Webchat</option>
-                <option value="socialmedie">socialmedie</option>
-                <option value="email">Email</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-40">
-              <label for="taskFuture">If you had to complete this task again, how would you prefer to do it?</label>
-            </div>
-            <div class="col-60">
-              <select id="taskFuture" name="taskFuture">
-                <option value="phone">Phone</option>
-                <option value="website">Website</option>
-                <option value="webchat">Webchat</option>
-                <option value="socialmedie">socialmedie</option>
-                <option value="email">Email</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-40">
-              <label for="rating">How satisfied are you with our website today? <br>(0-dissatisfied /
-                10-satisfied)</label>
-            </div>
-            <div class="col-60">
-              <input type="radio" id="0" name="rating" value="0">
-              <label for="0">0</label>
-              <input type="radio" id="1" name="rating" value="1">
-              <label for="1">1</label>
-              <input type="radio" id="2" name="rating" value="2">
-              <label for="2">2</label>
-              <input type="radio" id="3" name="rating" value="3">
-              <label for="2">3</label>
-              <input type="radio" id="4" name="rating" value="4">
-              <label for="2">4</label>
-              <input type="radio" id="5" name="rating" value="5">
-              <label for="2">5</label>
-              <input type="radio" id="6" name="rating" value="6">
-              <label for="2">6</label>
-              <input type="radio" id="7" name="rating" value="7">
-              <label for="2">7</label>
-              <input type="radio" id="8" name="rating" value="8">
-              <label for="2">8</label>
-              <input type="radio" id="9" name="rating" value="9">
-              <label for="2">9</label>
-              <input type="radio" id="10" name="rating" value="10">
-              <label for="2">10</label>
-            </div>
-            <div class="error" id="ratingErr"></div>
-          </div>
-
-          <div class="row">
-            <div class="col-40">
-              <label for="reasons">Please tell us your reasons for giving this rating:</label>
-            </div>
-            <div class="col-60">
-              <textarea id="reasons" name="reasons" placeholder="Reasons.." style="height:80px"></textarea>
-              <div class="error" id="reasonsErr"></div>
-            </div>
-          </div>
-
-
-          <div class="row">
-            <input type="reset" value="Reset">
-            <input type="submit" value="Send">
-          </div>
-        </form>
+    
+    
+        </div>
       </div>
-
-
-    </div>
-  </div>
+    
   <!----------- Footer -------------->
 
-  <footer id="footer">
-    <!-- <div class="title-text">
-      <p>Contact Us
-      </p>
-      <div class="social-media-icons">
-        <a href="https://www.instagram.com/?hl=en" target="_blank"><i class="fa fa-instagram"
-            style="color:#40c7d1;"></i></a>
-        <a href="https://www.instagram.com/?hl=en" target="_blank"><i class="fa fa-facebook-f"
-            style="color:#40c7d1;"></i></a>
-        <a href="https://www.instagram.com/?hl=en" target="_blank"><i class="fa fa-twitter-square"
-            style="color:#40c7d1;"></i></a>
-        <a href="https://www.instagram.com/?hl=en" target="_blank"><i class="fa fa-linkedin-square"
-            style="color:#40c7d1;"></i></a>
-      </div>
-    </div> -->
-    <!-- <div class="footer-row"> -->
-      <!-- <div class="footer-left">
-        <p> <i class="fa fa-home" aria-hidden="true"></i> Run Sports, Col 08. , Sri Lanka</p>
-        <p> <i class="fa fa-envelope" aria-hidden="true"></i> run_sports@gmail.com</p>
-        <p> <i class="fa fa-phone" aria-hidden="true"></i> +94 112057452</p>
-      </div> -->
-<!-- 
-      <div class="footer-right">
-
-        <a href="#" target="blank" class="footer a:link">
-          <p> Terms of condition</p>
-        </a>
-        <a href="#" target="blank">
-          <p> F A Q</p>
-        </a>
-      </div> -->
-    <!-- </div> -->
-    <div class="copywrite">
+    <section class="footer-copyRight">
       <p>Copyright &copy; 2023 Run Sports (Pvt) Ltd. All Rights Reserved.</p>
-      <p>Developed by a
-        <a href="about-us.html#devs">Designzillas Group of Developers</a>
-      </p>
-    </div>
-  </footer>
+      <p>Developed by <a href="/views/PageEditor_Stu2.html">Jinodi Widanage</a>
+      </p>   
+  </section>
 
-  <!-- Back to top button -->
-  <div class="goUp" id="up">
-    <a href="#top">&#8963;</a>
-  </div>
 </body>
 
 </html>

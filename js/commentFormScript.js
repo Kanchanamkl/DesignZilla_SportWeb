@@ -3,17 +3,20 @@ function printError(elemId, hintMsg) {
     document.getElementById(elemId).innerHTML = hintMsg;
 }
 
-// Defining a function to validate form
+// Defining a function to validate form 
 function validateForm() {
-    // Retrieving the values of form elements
-    var name = document.commentForm.name.value;
-    var email = document.commentForm.email.value;
-    var rating = document.commentForm.rating.value;
-    var reasons = document.commentForm.reasons.value;
+    // Retrieving the values of form elements 
+    var name = document.contactForm.name.value;
+    var email = document.contactForm.email.value;
+    var preTask = document.contactForm.preTask.value;
+    var postTask = document.contactForm.postTask.value;
+    var rating = document.contactForm.rating.value;
+    var reasons = document.contactForm.reasons.value;
    
+    
   // Defining error variables with a default value
     var nameErr = emailErr = ratingErr = reasonsErr = true;
-   
+    
     // Validate name
     if(name == "") {
         printError("nameErr", "Please enter your name");
@@ -26,7 +29,7 @@ function validateForm() {
             nameErr = false;
         }
     }
-   
+    
     // Validate email address
     if(email == "") {
         printError("emailErr", "Please enter your email address");
@@ -56,20 +59,17 @@ function validateForm() {
         printError("reasonsErr", "");
         genderErr = false;
     }
-   
+    
     // Prevent the form from being submitted if there are any errors
     if((nameErr || emailErr || ratingErr || reasonsErr  ) == true) {
        return false;
     } else {
-        // Creating a string from input data for preview
-        var dataPreview = "You've entered the following details: \n" +
-                          "Name: " + name + "\n" +
-                          "Address: " + email + "\n" +
-                          // "Mobile Number: " + mobile + "\n" +
-                          // "Country: " + country + "\n" +
-                          // "Gender: " + gender + "\n";
        
-        // Display input data in a dialog box before submitting the form
+       
+        // Display a message for the successfull submission
+        var dataPreview = "Thank You for your feedback";
         alert(dataPreview);
     }
 };
+
+

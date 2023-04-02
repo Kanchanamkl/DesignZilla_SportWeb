@@ -5,8 +5,238 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>RUN-Quiz</title>
     <link rel="stylesheet" href="\css\navBarStyles.css">
-    <link rel="stylesheet" href="/css/quizStyles.css">
-    <script src="/js/quizScript.js"></script>
+    <style>
+        .quizArea {
+            padding-top: 60px;
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #terms h2 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .quizArea h1 {
+            text-align: center;
+        }
+
+        .quizArea ul {
+            list-style-type: none;
+        }
+
+        .quizStart {
+            width: 1200px;
+            background-image: url('../img/quizbg.jpg');
+        }
+
+        .quizStartOverlay {
+            width: 1200px;
+            display: flex; 
+            flex-direction: column; 
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+        }
+
+        .timer-section{
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #box{
+            width: 500px;
+            overflow: hidden;
+            background: #0C0A7D;
+            box-shadow: 0 0 10px black;
+            border-radius: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            padding: 10px;
+            text-align: center;
+            display: none;
+        }
+
+        #box h1{
+            color: rgb(0, 0, 0);
+        }
+
+        .close{
+            width: 150px;
+            font-size: 18px;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            background: var(--secondaryColour);
+            display: inline-block;
+            border: 1px solid white;
+            border-radius: 10px;
+        }
+
+        #title1 {
+            margin: 150px 0;
+        }
+
+        #title1 h1 {
+            font-size: 300%;
+            margin: 100px 0;
+        }
+
+        #title2 ol>li {
+            margin-bottom: 20px;
+        }
+
+        #title2 ul {
+            margin-top: 15px;
+        }
+
+        #title2 ul>li {
+            margin-bottom: 5px;
+        }
+
+        #quizBtn1 {
+            width: 150px;
+            font-size: 18px;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            display: inline-block;
+            border: 1px solid white;
+            border-radius: 10px;
+            background-color: #0C0A7D;
+            margin-bottom: 150px;
+            box-shadow: 0 0 15px black;
+
+        }
+
+        #quizBtn2 {
+            width: 150px;
+            font-size: 18px;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            display: inline-block;
+            border: 1px solid white;
+            border-radius: 10px;
+            background-color: #0C0A7D;
+            box-shadow: 0 0 15px black;
+            margin-bottom: 200px;
+        }
+
+        .quizTerms{
+            margin-top: 50px;
+            margin-bottom: 100px;
+        }
+
+        .quizTerms span{
+            font-weight: bold;
+            font-size: small;
+        }
+
+        #marks {
+            color: white;
+        }
+    </style>
+
+    <script>
+        function toggleDisplay() {
+            var t1 = document.getElementById("title1");
+            var t2 = document.getElementById("title2");
+            var btn1 = document.getElementById("quizBtn1");
+            var btn2 = document.getElementById("quizBtn2");
+            var terms = document.getElementById("terms");
+            if (t1.style.display === "none") {
+                t1.style.display = "block";
+                t2.style.display = "none";
+
+                btn1.style.display = "block";
+                btn2.style.display = "none";
+
+
+            } else {
+                t1.style.display = "none";
+                t2.style.display = "block";
+                
+                btn2.style.display = "block";
+                btn1.style.display = "none";
+
+                terms.style.display = "none";
+
+            }
+            startTimer(60);
+        }
+
+        function startTimer(time) {
+            counter = setInterval(timer, 1000);
+            function timer() {
+                    document.getElementById("timer").textContent = time;
+                time--;
+                timeValue = time;
+                if (time <= 0) {
+                    timeTaken = 60 - timeValue;
+                
+                    clearInterval(counter);
+                    //stopTimer(counter);
+                    
+                }
+            }
+        }
+
+        function getRadioValue(radioArray,tot) {
+            let c = 0;
+            for (let i = 0; i < radioArray.length; i++) {
+                if (radioArray[i].checked) {
+                    tot += Number(radioArray[i].value)
+                } else {
+                    c += 1;
+                }
+                
+            }
+            if (c === 4) {
+                tot -= 1;
+            }
+            return(tot)
+        }
+
+        function funcQuizResult() {
+            let tot = 0;
+            for (let i = 1; i <= 10; i++) {
+                let q = "q" + i;
+                let radioArray = document.form[q];
+                tot = getRadioValue(radioArray, tot)
+            }
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+            pop(tot,false);
+
+            clearInterval(counter);
+            time = document.getElementById("timer").textContent;
+            document.getElementById("timer").textContent = time;
+            
+        }
+
+        function pop(tot,popup) {
+            if(popup === false) {
+                document.getElementById("box").style.display = "block";
+                if (tot > 5) {
+                    document.getElementById("box").style.backgroundColor = "#cdebd7"
+                    document.getElementById("marks").innerHTML = "<h2>Congratulations!</h2><p>You have received " + tot + " marks for the quiz.";
+                } else {
+                    document.getElementById("marks").innerHTML = "<h2>Oh No!</h2><p>You have received only " + tot + " marks for the quiz.";
+                }
+                popup = true
+
+            } else {
+                location.replace("../html/Student3_Implementation.html")
+                popup = false
+            }
+        }
+    </script>
 </head>
 <body>
 
@@ -204,52 +434,17 @@
         <!-- T&C End -->
 
     </div>
-      <!----------- Footer -------------->
+    
 
-  <footer id="footer">
-    <div class="title-text">
-      <p>Contact Us
-      </p>
-      <div class="social-media-icons">
-        <a href="https://www.instagram.com/?hl=en" target="_blank"><i class="fa fa-instagram"
-            style="color:#40c7d1;"></i></a>
-        <a href="https://www.instagram.com/?hl=en" target="_blank"><i class="fa fa-facebook-f"
-            style="color:#40c7d1;"></i></a>
-        <a href="https://www.instagram.com/?hl=en" target="_blank"><i class="fa fa-twitter-square"
-            style="color:#40c7d1;"></i></a>
-        <a href="https://www.instagram.com/?hl=en" target="_blank"><i class="fa fa-linkedin-square"
-            style="color:#40c7d1;"></i></a>
-      </div>
-    </div>
-    <div class="footer-row">
-      <div class="footer-left">
-        <p> <i class="fa fa-home" aria-hidden="true"></i> Run Sports, Col 08. , Sri Lanka</p>
-        <p> <i class="fa fa-envelope" aria-hidden="true"></i> run_sports@gmail.com</p>
-        <p> <i class="fa fa-phone" aria-hidden="true"></i> +94 112057452</p>
-      </div>
-
-      <div class="footer-right">
-
-        <a href="#" target="blank" class="footer a:link">
-          <p> Terms of condition</p>
-        </a>
-        <a href="#" target="blank">
-          <p> F A Q</p>
-        </a>
-      </div>
-    </div>
-    <div class="copywrite">
-      <p>Copyright &copy; 2023 Run Sports (Pvt) Ltd. All Rights Reserved.</p>
-      <p>Developed by a
-        <a href="about-us.html#devs">Designzillas Group of Developers</a>
-      </p>
-    </div>
-  </footer>
-
-  <!-- Back to top button -->
-  <div class="goUp" id="up">
-    <a href="#top">&#8963;</a>
-  </div>
     </script>
+
+     <!----------- Footer -------------->
+
+     <section class="footer-copyRight">
+        <p>Copyright &copy; 2023 Run Sports (Pvt) Ltd. All Rights Reserved.</p>
+        <p>Developed by 
+          <a href="/views/PageEditor_Stu3.html">Geeviniy Vazavan</a>
+        </p>   
+    </section>
 </body>
 </html>

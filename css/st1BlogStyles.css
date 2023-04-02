@@ -1,0 +1,88 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+  
+    font-family: 'Inter', sans-serif;
+}
+
+
+
+body{
+	margin:0px;
+	/* font-family:sans-serif; */
+}
+.header_wrapper{
+	min-height:80vh;
+	width:100%;	
+	background-image: url(/img/swimming_blog.png);
+	background-position: 50% 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	box-shadow: 0 0 0 200vh rgba(0,0,0,0.6) inset;
+	display: table;
+	color:#ffffff;
+	-webkit-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	transition-duration: 1s;
+}
+.header{
+	display: table-cell;
+	vertical-align: middle;
+	text-align:center;
+}
+.header h1{
+	font-size:64px;
+	margin: 32px 0;
+}
+.header .text{
+	font-size:24px;
+	color:rgba(255, 255, 255, 0.8);
+}
+
+.main p{
+	width:70vw;
+	max-width:calc(100% - 16px);
+	padding:8px;
+	margin: 24px auto;
+	line-height: calc(14px + 3vmin);
+	font-size: calc(8px + 3vmin);
+	text-align: justify;
+	color: #615f5f;
+}
+
+.main img{
+	width:100vw;
+	height: auto;
+
+}
+.main a[href]{
+	position:relative;
+	text-decoration:none;
+	color:#5544DD;
+	border-bottom: 2px dotted;
+	cursor:pointer;
+}
+
+.footer_wrapper{
+	width:100%;
+	background:#1d1f20;
+}
+.footer_wrapper .footer{
+	width:720px;
+	max-width:calc(100% - 16px);
+	padding:8px;
+	margin:0 auto;
+	line-height: calc(14px + 3vmin);
+	font-size: calc(8px + 3vmin);
+}
+.footer_wrapper .footer a{
+	color:#ffffff;
+	text-decoration:none;
+}
+.footer_wrapper .footer a:hover{
+	border-bottom:2px dotted #ffffff;
+}

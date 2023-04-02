@@ -77,3 +77,22 @@ body {
 img {
     vertical-align: middle;
 }
+
+
+
+
+
+
+
+
+/* -------------- Footer - Copy Right ----------------- */
+
+.footer-copyRight{
+    padding: 5px 0px 5px ;
+    background:#386f6c; 
+    text-align: center;
+    line-height: 1.8;
+    font-weight: bold;
+    font-size: small;
+    color: #000; 
+  }

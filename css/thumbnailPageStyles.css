@@ -295,6 +295,7 @@ button#decreasetext {
    left: 73vw;
    top: 1vh;
    background-color: #e4626200;
+   text-align: center;
 }
 
 #color-container {
@@ -306,6 +307,7 @@ button#decreasetext {
    left: 84vw;
    top: 1vh;
    background-color: #e4626200;
+   text-align: center;
 }
 
 #color-container .textcontrols{

@@ -23,9 +23,7 @@ button::-moz-focus-inner {
   border: 0;
 }
 
-html {
-  font-size: 62.5%;
-}
+
 
 body {
   min-height: 100vh;
@@ -34,6 +32,10 @@ body {
   background: hsl(220, 25%, 10%);
 
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 h1,
@@ -47,38 +49,6 @@ h1 {
   font-size: 3.2rem;
   letter-spacing: .4rem;
   font-family: 'Press Start 2P', cursive;
-}
-
-.stu_details{
-  background-color: rgba(0, 0, 0, 0.315);
-  width:fit-content;
-  position: relative;
-  top: 2vh;
-  left:auto;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  padding: 10px;
-  width: auto;
-}
-.stu_details h2{
-  margin: 1px;
-  color: hsl(230, 5%, 66%);
-  font-size: 1.9rem;
-  font-family: 'Inconsolata', monospace;
-  font-family: 'Nunito', sans-serif;
-  text-align: center;
-  position: relative;
-  
-}
-
-.stu_details p{
-  color: hsl(230, 5%, 66%);
-  font-family: 'Inconsolata', monospace;
-  font-family: 'Nunito', sans-serif;
-  text-align: center;
 }
 
 
@@ -138,6 +108,40 @@ p {
   font-size: 1.6rem;
   margin-top: 1.6rem;
 }
+
+
+.stu_details{
+  background-color: rgba(0, 0, 0, 0.315);
+  width:fit-content;
+  position: relative;
+  top: 2vh;
+  left:auto;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 10px;
+  width: auto;
+}
+.stu_details h2{
+  margin: 1px;
+  color: hsl(230, 5%, 66%);
+  font-size: 1.9rem;
+  font-family: 'Inconsolata', monospace;
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  position: relative;
+  
+}
+
+.stu_details p{
+  color: hsl(230, 5%, 66%);
+  font-family: 'Inconsolata', monospace;
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+}
+
 
 a{
   color: black;

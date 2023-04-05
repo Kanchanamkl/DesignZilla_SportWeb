@@ -16,7 +16,7 @@ body{
 .header_wrapper{
 	min-height:80vh;
 	width:100%;	
-	background-image: url(/img/Volleyball1.jpeg);
+	background-image: url(../img/Volleyball1.jpeg);
 	background-position: 50% 50%;
 	background-size: cover;
 	background-repeat: no-repeat;

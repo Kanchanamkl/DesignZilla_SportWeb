@@ -104,7 +104,7 @@ img {vertical-align: middle;} */
 
 @keyframes change{
     0%{
-        background: linear-gradient(rgba(0,0,0,0.5),#0c8278), url("/img/banner1.png");
+        background: linear-gradient(rgba(0,0,0,0.5),#0c8278), url("../img/banner1.png");
 
         background-size: cover;
         background-position: center;
@@ -112,13 +112,13 @@ img {vertical-align: middle;} */
     }
     20%{
         
-        background: linear-gradient(rgba(0,0,0,0.5),#495555), url("/img/banner2.png");
+        background: linear-gradient(rgba(0,0,0,0.5),#495555), url("../img/banner2.png");
         background-size: cover;
         background-position: center;
         height: 100vh;
     }
     40%{
-        background: linear-gradient(rgba(0,0,0,0.5),#0c8278), url("/img/banner1.png");
+        background: linear-gradient(rgba(0,0,0,0.5),#0c8278), url("../img/banner1.png");
    
         background-size: cover;
         background-position: center;
@@ -126,7 +126,7 @@ img {vertical-align: middle;} */
 
     }
     60%{
-    background: linear-gradient(rgba(0,0,0,0.5),#25614d), url("/img/banner3.png");
+    background: linear-gradient(rgba(0,0,0,0.5),#25614d), url("../img/banner3.png");
     background-size: cover;
     background-position: center;
     height: 100vh;

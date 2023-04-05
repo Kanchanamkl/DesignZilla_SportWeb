@@ -22,6 +22,9 @@
 .quizStart {
     width: 1200px;
     background-image: url('../img/quizbg.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    
 }
 
 .quizStartOverlay {

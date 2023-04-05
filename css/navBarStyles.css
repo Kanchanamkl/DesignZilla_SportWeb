@@ -94,5 +94,24 @@ img {
     line-height: 1.8;
     font-weight: bold;
     font-size: small;
-    color: #000; 
+    color: #000;
+    /* margin-top: 4vh; */
+    position: static;
+    top: 100vh;
   }
+
+
+#siteMap_id{
+    padding: 3px 0px 3px ;
+    background:#386f6c; 
+    text-align: center;
+    line-height: 1.8;
+    font-weight: bold;
+    font-size: small;
+    color: #000;
+    margin-top: 4vh;
+    position: absolute;
+    top: 83vh;
+    width: 100vw;
+
+}

@@ -64,7 +64,7 @@ h1 {
   width: auto;
 }
 .stu_details h2{
-  margin: 4px;
+  margin: 1px;
   color: hsl(230, 5%, 66%);
   font-size: 1.9rem;
   font-family: 'Inconsolata', monospace;
@@ -87,7 +87,7 @@ h1 {
   height:fit-content;
   width: fit-content;
   position: relative;
-  top: 6vh;
+  top: 3vh;
   left: auto;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -99,7 +99,7 @@ h1 {
 }
 
 .editor_tasks h2{
-  margin: 7px;
+  margin: 1px;
   color: hsl(240, 40%, 98%);
   font-size: 2rem;
   font-family: 'Inconsolata', monospace;
@@ -117,7 +117,7 @@ h1 {
   text-align: center;
   margin-left: 5vw;
   margin-right: 5vw;
-  margin-top: 5vh;
+  margin-top: 3vh;
   margin-bottom: 5vh;
   position: relative;
  
@@ -139,35 +139,11 @@ p {
   margin-top: 1.6rem;
 }
 
-
-
-
-/* link */
-/* =============================================================================== */
-.link {
-  --color: hsl(200, 60%, 50%);
-  --shadow: hsl(230, 5%, 66%);
-  --border-color: hsl(230, 5%, 44%);
-
-  color: var(--color);
-  border-bottom: 1px solid var(--border-color);
-
-  font-size: 1.8rem;
-  font-weight: normal;
-  text-decoration: none;
-  letter-spacing: .2rem;
-
-  cursor: pointer;
-  position: relative;
-
-  transition: .4s;
+a{
+  color: black;
 }
 
-.link:hover,
-.link:focus,
-.link:active {
-  border-color: chartreuse;
-}
+
 
 
 

@@ -6,12 +6,12 @@ function printError(elemId, hintMsg) {
 // Defining a function to validate form 
 function validateForm() {
     // Retrieving the values of form elements 
-    var name = document.contactForm.name.value;
-    var email = document.contactForm.email.value;
-    var preTask = document.contactForm.preTask.value;
-    var postTask = document.contactForm.postTask.value;
-    var rating = document.contactForm.rating.value;
-    var reasons = document.contactForm.reasons.value;
+    var name = document.commentForm.name.value;
+    var email = document.commentForm.email.value;
+    var preTask = document.commentForm.preTask.value;
+    var postTask = document.commentForm.postTask.value;
+    var rating = document.commentForm.rating.value;
+    var reasons = document.commentForm.reasons.value;
    
     
   // Defining error variables with a default value
@@ -49,7 +49,7 @@ function validateForm() {
         printError("ratingErr", "Please select your rating");
     } else {
         printError("ratingErr", "");
-        genderErr = false;
+        reasonsErr = false;
     }
 
     // Validate reasoning
@@ -57,7 +57,7 @@ function validateForm() {
         printError("reasonsErr", "Please enter a reason ");
     } else {
         printError("reasonsErr", "");
-        genderErr = false;
+        reasonsErr = false;
     }
     
     // Prevent the form from being submitted if there are any errors
